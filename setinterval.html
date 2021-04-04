@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="num"></h1>
+    <br />
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+      const start = document.querySelector("#start");
+      const stop = document.querySelector("#stop");
+      const num = document.querySelector("#num");
+
+      let count = 0;
+      let timeRef;
+      const startCount = () => {
+        num.innerHTML = " Loading.... . ";
+        timeRef = setInterval(() => {
+          num.innerHTML = ` ${count} `;
+          count++;
+        }, 1000);
+      };
+
+      start.addEventListener("click", startCount);
+
+      stop.addEventListener("click", () => {
+        clearInterval(timeRef);
+      });
+    </script>
+  </body>
+</html>

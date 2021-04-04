@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="full">
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="printPage()">Print this page</button>
+</div>
+<script>
+	function printPage(){
+    	document.getElementById("full").innerHTML = ` <h1> print this message! </h1> `
+        window.print()
+    }
+</script>
+
+</body>
+</html>

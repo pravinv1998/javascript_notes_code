@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+    <style>
+      .main-body {
+        background-color: #6ed2d6;
+        text-align: center;
+      }
+
+      .main-button {
+        border-radius: 5px;
+        background-color: #d26ed6;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="main-body">
+    <div class="main-div">
+      <input id="ename" type="text" />
+      <select name="icecream" id="ice" onchange="changeEvent()">
+        <option value=""> Select one... </option>
+        <option value="chocolate">Chocolate</option>
+        <option value="cadbary">Cadbary</option>
+        <option value="froots">Froots</option>
+        <option value="jelly">Jelly</option>
+        <option value="">Froots</option>
+      </select>
+      <h2 id="btn1" class="main-but"></h2>
+    </div>
+
+    <script>
+
+        
+
+    const changeEvent = () => {
+        const name = document.querySelector('#ename').value;
+        const icecreame = document.querySelector('#ice').value;
+        const dis = document.querySelector('#btn1');
+
+        dis.innerHTML = ` MR. ${ name } likes ${ icecreame } `
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // alert('hi')
+    //   const h1Value = document.querySelector("#main-text");
+    //   const buttonValue = document.querySelector("#btn1");
+      // console.log(h1Value )
+      // console.log(buttonValue)
+
+      // buttonValue.addEventListener('mouseenter', ()=>{
+      //     buttonValue.style.backgroundColor = 'red';
+      // })
+
+      // const checkEvent = () => {
+      //     console.log(event)
+      //     h1Value.innerHTML =   ' <h1>print this message!</h1>  '
+
+      // }
+
+      // buttonValue.addEventListener('click', checkEvent)
+    </script>
+  </body>
+</html>
+
+<!-- use addEventListner and querySelect -->
